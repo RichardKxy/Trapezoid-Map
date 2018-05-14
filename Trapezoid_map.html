@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="Xiangyu Kong">
+    <title>Trapezoid_map</title>
+</head>
+<body>
+<canvas id="myCanvas" width="640" height="480" style="border:1px solid #d3d3d3; position:absolute;top:0px;left:640px;"></canvas>
+<div id = "d" style="width:600px; height:480px; overflow:auto">
+    <canvas id="gameView" style="background-color:antiquewhite; top:0px;left:0px;"> </canvas>
+</div>
+<div id = "note" style="width:1200px; height:100px; position:absolute;top:500px;left:10px;font-family:Times New Roman;line-height:100%;">
+    <p>Note:<br/>
+        1. If user inputs new segments manually, please make sure there is no intersection between each other.<br/>
+        2. Location is to show the binary search step by step and locates the left endpoint of the segment.
+        Update is to update the new structure of Trapezoid map. If location is finished, please click Update button.<br/>
+        3. Mode button can change the mode between building Trapezoid map and querying a point.<br/>
+        4. If user wants to query another point, user only needs to click Query button again and input a new query point.<br/>
+        5. The number of segments in Random is 4.<br/>
+        6. The number of segments in Worst case is 3. Because of the uncertain number of children, the size of binary tree may
+        be pretty large. Due to the special structure in worst case, I compact the width of the structure. There is no influence
+        on the height of the structure. In worst case, user cannot add any segment and query a point.</P>
+
+</div>
+<input type="button" name="button" value="Mode:Build" id="Mode">
+<button type="button" value ="Location" id="Location">Location</button>
+<button type="button" value ="Update" id="Update">Update</button>
+<button type="button" value ="Query" id="Query">Query</button>
+<button type="button" value ="Random" id="Random">Random</button>
+<button type="button" value ="Worst case" id="Worstcase">Worst case</button>
+<button type="button" value ="Refresh" id="Refresh">Refresh</button>
+<script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+<script src="Structure.js"></script>
+<script src="Trapezoid.js"></script>
+</body>
+</html>
